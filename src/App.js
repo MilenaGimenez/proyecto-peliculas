@@ -35,6 +35,6 @@ const App = () => {
       </Router>
     </Layout>
   );
-}
+};
 
 export default App;
