@@ -1,5 +1,5 @@
 import { Layout } from 'antd';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 
 //Pages
 import Home from './pages/home';
@@ -18,7 +18,7 @@ const App = () => {
 
   return (
     <Layout>
-      <Router>
+      <HashRouter basename="/">
         <Header>
           <MenuTop />
         </Header>
@@ -32,7 +32,7 @@ const App = () => {
             <Route path='*' exact={true} component={Error404} />
           </Switch>
         </Content>
-      </Router>
+      </HashRouter>
     </Layout>
   );
 };
